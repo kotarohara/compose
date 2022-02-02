@@ -1,14 +1,15 @@
 version: '2.4' # using `2.4` instead of `3` as it seems like v3 doesn't support platform.
 services:
   frontend:
-    image: 792357687789.dkr.ecr.ap-southeast-1.amazonaws.com/compose-frontend
     platform: linux/amd64
     build: frontend
     ports:
       - 80:80
     depends_on:
-      - backend
+      - backend    
   backend:
-    image: 792357687789.dkr.ecr.ap-southeast-1.amazonaws.com/compose-backend
     platform: linux/amd64
     build: backend
+
+
+
