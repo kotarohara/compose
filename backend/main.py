@@ -14,6 +14,7 @@ def hello():
   \____\_______/
 
 Hello from Docker!
+Deployed with GitHub Actions!
 
 """
 
