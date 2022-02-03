@@ -1,8 +1,10 @@
-version: '2.4' # using `2.4` instead of `3` as it seems like v3 doesn't support platform.
+version: '2.4'
 services:
   frontend:
     platform: linux/amd64
-    build: frontend
+    build: 
+      context: frontend
+      dockerfile: Dockerfile.dev
     ports:
       - 80:80
     depends_on:
@@ -10,6 +12,3 @@ services:
   backend:
     platform: linux/amd64
     build: backend
-
-
-
